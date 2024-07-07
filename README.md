@@ -1,7 +1,3 @@
-当为项目编写 README 文件时，主要目标是清晰地介绍项目的目的、功能、如何安装和使用，以及如何贡献或报告问题。以下是一个示例 README 文件的模板，适用于您所描述的项目（假设是基于 DCI 架构的 C++ 项目）：
-
----
-
 # DCI Pattern Example Project
 
 This project demonstrates the implementation of the Data, Context, and Interaction (DCI) architectural pattern in C++.
@@ -16,76 +12,20 @@ The DCI pattern promotes the separation of concerns by assigning behaviors (role
 - **Role Binding**: Roles (`Game`, `Money`) can be dynamically bound to objects (`Player`, `Consumer`).
 - **Example Usage**: Demonstrates how a `Player` can interact with a `Game` and manage `Money` using the DCI pattern.
 
-## Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/dci-pattern-cpp.git
-   ```
-   
-2. Navigate into the project directory:
-   ```
-   cd dci-pattern-cpp
-   ```
-
-3. Build the project (assuming you have a suitable build system):
-   ```
-   make
-   ```
-   
-   Alternatively, you can manually compile the source files using your preferred C++ compiler.
-
-## Usage
-
-1. Include the necessary headers in your project:
-
-   ```cpp
-   #include "Player.h"
-   #include "Consumer.h"
-   ```
-
-2. Create an instance of `Inst`:
-
-   ```cpp
-   Inst instance;
-   ```
-
-3. Use the instance to play a game and manage money:
-
-   ```cpp
-   // Buy a game
-   Game game1 = {"Chess", 10};
-   instance.Buy(game1);
-
-   // Play the current game
-   instance.Play();
-
-   // Check remaining money
-   int remainingMoney = instance.GetLeftMoney();
-   std::cout << "Remaining money: " << remainingMoney << std::endl;
-   ```
-
-4. Customize and extend roles as needed for your specific application logic.
-
-## Contributing
-
-Contributions are welcome! If you have suggestions for improvements, open a GitHub issue or submit a pull request. Please follow the project's coding style and adhere to the guidelines in the CONTRIBUTING.md file.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- This project is inspired by the principles of the DCI architectural pattern.
-- Special thanks to the contributors and maintainers of the DCI pattern in C++ community.
+当编写项目的 README 文件时，重点是清楚地介绍项目的目的、功能、安装和使用方法，以及如何贡献或报告问题。以下是一个适用于您描述的基于 DCI 架构的 C++ 项目的 README 文件模板：
 
 ---
 
-### Notes:
+# DCI 模式示例项目
 
-- **Customization**: Replace placeholders (`yourusername`, `dci-pattern-cpp`) with actual details relevant to your project.
-- **Dependencies**: If your project requires specific dependencies or libraries, include instructions on how to install them.
-- **Documentation**: Consider providing more detailed documentation, especially for complex usage scenarios or advanced configurations.
+该项目演示了如何在 C++ 中实现数据、上下文和交互（DCI）架构模式。
 
-This template provides a basic structure for a README file tailored to a C++ project implementing the DCI pattern. Customize it further based on your specific project's needs and details.
+## 概述
+
+DCI 模式通过将行为（角色）动态分配给对象（数据），根据当前的上下文（交互），来促进关注点的分离。本项目展示了如何将角色动态应用于对象，以实现代码的灵活和可重用性。
+
+## 功能
+
+- **角色定义**：使用宏（`USE_ROLE`、`IMPL_ROLE`）定义和实现角色。
+- **角色绑定**：角色（`Game`、`Money`）可以动态绑定到对象（`Player`、`Consumer`）。
+- **示例用法**：演示了如何使用 DCI 模式让 `Player` 与 `Game` 互动，并管理 `Money`。
